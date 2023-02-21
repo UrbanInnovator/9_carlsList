@@ -4,6 +4,28 @@
     background-color: black;
 }
 
+header {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: baseline;
+}
+
+header #headline {
+    text-align: center;
+    font-size: 28px;
+    color:white;
+    font-family: 'Luckiest Guy';
+}
+
+header #logline {
+    margin-right:25px;
+    margin-left:35px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Luckiest Guy';
+}
+
 #postbox {
     display: flex;
     flex-direction: row;

@@ -17,23 +17,29 @@ const App = () => {
     
 
     return (
-      <div id="postbox">
-        {
-          allPosts ?
-            allPosts.map((singlePost, index) => {
-              return (
-                <div class="post" key={index}>
-                  <h3 class="title">{singlePost.title}</h3>
-                  <h5 class="smallinfo">Uploaded By: {singlePost.author.username} | Location: {singlePost.location}</h5>
-                  <h5 class="ID">ID#: {singlePost.author._id}</h5>
-                  <h4 class="price">{singlePost.price}</h4>
-                  <p class="descript">{singlePost.description}</p>
-                </div>
-              )
-            }) : 
-            <h3>Loading Post...</h3>
-        }
-      </div>
+      <>
+        <header>
+          <span id="headline">Stranger's Things</span>
+          <span id="logline">Login/Register</span>
+        </header>
+        <div id="postbox">
+            {
+              allPosts ?
+                allPosts.map((singlePost, index) => {
+                  return (
+                    <div class="post" key={index}>
+                      <h3 class="title">{singlePost.title}</h3>
+                      <h5 class="smallinfo">Uploaded By: {singlePost.author.username} | Location: {singlePost.location}</h5>
+                      <h5 class="ID">ID#: {singlePost.author._id}</h5>
+                      <h4 class="price">{singlePost.price}</h4>
+                      <p class="descript">{singlePost.description}</p>
+                    </div>
+                  )
+                }) : 
+                <h3>Loading Post...</h3>
+            }
+        </div>
+      </>
     )
 }
 
