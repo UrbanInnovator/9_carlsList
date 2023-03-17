@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Dokdo');
+
+header {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: baseline;
+    border-bottom: 1.5px solid red;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+header #headline {
+    text-align: center;
+    font-size: 45px;
+    color:white;
+    font-family: 'Dokdo';
+    text-decoration: none;
+}
+
+header #messages {
+    font-size: 30px;
+    color: white;
+    font-family: 'Dokdo';
+    text-decoration: none;
+}
+
+header #logline {
+    margin-right:25px;
+    margin-left:35px;
+    color: white;
+    font-size: 35px;
+    font-family: 'Dokdo';
+    text-decoration: none;
+}

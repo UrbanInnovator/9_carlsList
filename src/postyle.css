@@ -1,29 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent Marker | Luckiest+Guy | Leckerli+One');
+@import url('https://fonts.googleapis.com/css?family=Dokdo');
 
-* {
-    background-color: black;
-}
-
-header {
-    display:flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: baseline;
-}
-
-header #headline {
-    text-align: center;
-    font-size: 28px;
-    color:white;
-    font-family: 'Luckiest Guy';
-}
-
-header #logline {
-    margin-right:25px;
-    margin-left:35px;
+#load {
     color: white;
-    font-size: 18px;
-    font-family: 'Luckiest Guy';
+    text-align: center;
+    font-size: large;
 }
 
 #postbox {
@@ -31,6 +11,50 @@ header #logline {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+#newposttitle {
+    color:white;
+    font-family: 'Dokdo';
+    text-align: center;
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#newpost {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1.8px white;
+    padding: 8px;
+    margin: 10px;
+}
+
+.postfields {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1.5px red;
+    margin: 5px;
+    padding: 5px;
+}
+
+#descript {
+    height: 70px;
+    overflow: auto;
+}
+
+label {
+    text-align: center;
+    color:white;
+}
+
+#submit {
+    color:white;
+    border-radius: 15px;
+    border: solid 1.2px white;
+    margin: 5px;
+    padding: 5px;
 }
 
 .post {

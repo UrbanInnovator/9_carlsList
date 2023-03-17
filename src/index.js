@@ -1,9 +1,15 @@
 import React, { useEffect, useState} from 'react';
 import { createRoot } from 'react-dom/client';
-import './postyle.css'
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Header from './Header.js';
+import PostList from './listOfPost.js';
+import Login from './Login.js';
+import './page.css';
  
 const App = () => {
     const [ allPosts, setPosts ] = useState([]);
+    const [ isLoggedIn, setIsLoggedIn ] = useState(false);
+    // dont forget to change to work with returned token
     
     useEffect(() => {
         const getPosts = async () => {
@@ -18,31 +24,19 @@ const App = () => {
 
     return (
       <>
-        <header>
-          <span id="headline">Stranger's Things</span>
-          <span id="logline">Login/Register</span>
-        </header>
-        <div id="postbox">
-            {
-              allPosts ?
-                allPosts.map((singlePost, index) => {
-                  return (
-                    <div class="post" key={index}>
-                      <h3 class="title">{singlePost.title}</h3>
-                      <h5 class="smallinfo">Uploaded By: {singlePost.author.username} | Location: {singlePost.location}</h5>
-                      <h5 class="ID">ID#: {singlePost.author._id}</h5>
-                      <h4 class="price">{singlePost.price}</h4>
-                      <p class="descript">{singlePost.description}</p>
-                    </div>
-                  )
-                }) : 
-                <h3>Loading Post...</h3>
-            }
-        </div>
+        <Header isLoggedIn={isLoggedIn}/>
+        <Routes>
+          <Route path='/' element={<PostList isLoggedIn={isLoggedIn} allPosts={allPosts}/>}></Route>
+          <Route path='/login' element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>}></Route>
+        </Routes>   
       </>
     )
 }
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<App />);
+root.render(
+  <HashRouter>
+    <App />
+  </HashRouter>
+);

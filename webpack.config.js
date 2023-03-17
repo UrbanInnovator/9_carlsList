@@ -18,5 +18,9 @@ module.exports = {
                 ]
             }
         ]
+    },
+    watchOptions : {
+        poll: true,
+        ignored: /node-modules/
     }
 }
