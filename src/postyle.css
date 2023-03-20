@@ -39,6 +39,10 @@
     padding: 5px;
 }
 
+.title {
+    font-size: 15px;
+}
+
 #descript {
     height: 70px;
     overflow: auto;
@@ -94,6 +98,62 @@ label {
     width: 275px;
     margin:2px;
     border: 2px solid black;
+}
+
+#newmessage {
+    margin: 0px;
+    padding: 1px;
+    border: .5px;
+}
+
+.messageauthor {
+    overflow: auto;
+    height: 50px;
+    width: 275px;
+    margin:2px;
+    border: 2px solid black;
+    color:white;
+}
+
+.send {
+    color: white;
+    border-radius: 15px;
+    border: solid 1.2px red;
+    margin: 5px;
+    padding: 5px;
+}
+
+.send:hover {
+    color:red;
+    background-color: white;
+}
+
+.delete {
+    color:red;
+    border-radius: 15px;
+    border: solid 1.2px black;
+    margin: 3px;
+    padding: 5px;
+}
+
+.delete:hover {
+    background-color: #b00600;
+    color:white;
+}
+
+#mypostmessages {
+    color:black;
+    text-decoration: none;
+    border-radius: 15px;
+    border: solid 1.2px black;
+    margin: 3px;
+    padding: 5px;
+}
+
+#mypostmessages:hover {
+    background-color: black;
+    border:solid 1.2px red;
+    color:white;
 }
 
 
